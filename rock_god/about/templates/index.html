@@ -1,0 +1,29 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% block title %}<title>Main</title>{% endblock %}
+{% block style %}
+<style>
+    .content {
+        background: url('{% get_static_prefix %}media/images/index_background/{{image.image_path}}') no-repeat;
+        background-size: 100%;
+    }
+</style>
+{% endblock %}
+{% block content %}
+<div class="header">
+    <div class="name-header">Main page</div>
+</div>
+<div class="detail-content">
+    <div class="index-text">This site is dedicated to the game "Rock God Tycoon".
+        This is an arcade simulator of a rock band, where players develop their team in every possible way, arranging tours, recording new tracks and attracting as many fans as possible.</div>
+        
+        
+        <div class="body-text">Release date: Feb 13 2017<br>
+Developer: Sebastian Nigro, Panos Tzimas<br>
+Publisher: Emberwulf</div>
+        
+
+
+        <div class="footer-text">This is not an official site. All rights belong to the present publisher of the game and developers. In case of any violations, please contact the copyright holders via <a href="https://twitter.com/EliseevValery">Twitter</a></div>
+</div>
+{% endblock %}

@@ -1,0 +1,141 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% block title %}
+<title>{{cities.city_name}}</title>
+{% endblock %}
+{% block style %}
+<style>
+    .content {
+        background: url('{% get_static_prefix %}media/images/cities/{{cities.map}}') no-repeat;
+        background-size: 100%;
+    }
+
+    .gig{
+        position: absolute;
+        left: {{ cities.gig.x }}px;
+        top: {{ cities.gig.y }}px; 
+    }
+
+    .gig:hover{
+        cursor: pointer;
+        position: absolute;
+        left: {{ cities.gig.x }}px;
+        top: calc({{ cities.gig.y }}px - 1px);
+    }
+
+    .pub{
+        position: absolute;
+        left: {{ cities.pub_x }}px;
+        top: {{ cities.pub_y }}px; 
+    }
+
+    .pub:hover{
+        cursor: pointer;
+        position: absolute;
+        left: {{ cities.pub_x }}px;
+        top: calc({{ cities.pub_y}}px - 1px);
+    }
+
+    .fastfood{
+        position: absolute;
+        left: {{ cities.fastfood_x }}px;
+        top: {{ cities.fastfood_y }}px; 
+    }
+
+    .fastfood:hover{
+        cursor: pointer;
+        position: absolute;
+        left: {{ cities.fastfood_x }}px;
+        top: calc({{ cities.fastfood_y}}px - 1px);
+    }
+
+    .studio {
+        position: absolute;
+        left: {{ cities.studio.x }}px;
+        top: {{ cities.studio.y }}px; 
+
+    }
+
+    .studio:hover {
+        cursor: pointer;
+        position: absolute;
+        left: {{ cities.studio.x }}px;
+        top: calc({{ cities.studio.y }}px - 1px);
+    }
+
+    .record {
+        position: absolute;
+        left: {{ cities.record.x }}px;
+        top: {{ cities.record.y }}px; 
+    }
+
+    .record:hover {
+        cursor: pointer;
+        position: absolute;
+        left: {{ cities.record.x }}px;
+        top: calc({{ cities.record.y }}px - 1px);
+    }
+
+    .video {
+        position: absolute;
+        left: {{ cities.video.x }}px;
+        top: {{ cities.video.y }}px; 
+
+    }
+
+    .video:hover {
+        cursor: pointer;
+        position: absolute;
+        left: {{ cities.video.x }}px;
+        top: calc({{ cities.video.y }}px - 1px);
+
+    }
+
+    .hospital {
+        position: absolute;
+        left: {{ cities.hospital_x }}px;
+        top: {{ cities.hospital_y }}px; 
+
+    }
+
+    .hospital:hover {
+        cursor: pointer;
+        position: absolute;
+        left: {{ cities.hospital_x }}px;
+        top: calc({{ cities.hospital_y}}px - 1px);
+
+    }
+
+    .strip {
+        position: absolute;
+        left: {{ cities.strip_x }}px;
+        top: {{ cities.strip_y }}px; 
+
+    }
+
+    .strip:hover {
+        cursor: pointer;
+        position: absolute;
+        left: {{ cities.strip_x }}px;
+        top: calc({{ cities.strip_y}}px - 1px);
+
+    }
+</style>
+{% endblock %}
+{% block content %}
+<div class="about-city">
+<div class="city-name">{{cities.city_name}}</div>
+<div class="city-population">Population:{{cities.population}}</div>
+<div class="city-fans">Fans need to open city: {{cities.fans_need}}</div>
+</div>
+        {% if cities.gig != None %}<div class="gig"><a href="{{ cities.gig.get_absolute_url }}"><img src="{% static '/media/images/icons/gig.png' %}" alt="{{cities.gig}}"></a></div>{% endif %}
+    {% if cities.studio != None %}<div class="studio"> <a href="{{ cities.studio.get_absolute_url }}"><img src="{% static '/media/images/icons/record_deal.png' %}" alt="{{cities.studio}}"></a></div>{% endif %}
+    {% if cities.record != None %}<div class="record">  <a href="{{ cities.record.get_absolute_url }}"><img src="{% static '/media/images/icons/record_studio.png' %}" alt="{{cities.record}}"></a></div>{% endif %}
+    {% if cities.video != None %}<div class="video"> <a href="{{ cities.video.get_absolute_url }}"><img src="{% static '/media/images/icons/video.png' %}" alt="{{cities.video}}"></a></div>{% endif %}
+    {% if cities.hospital != None %}<div class="hospital"> <a href="{{ cities.hospital.get_absolute_url }}"><img src="{% static '/media/images/icons/rehab.png' %}" alt="{{cities.hospital}}"></a></div>{% endif %}
+        {% if cities.pub != None %}<div class="pub"><a href="{{ cities.pub.get_absolute_url }}"><img src="{% static '/media/images/icons/pub.png' %}" alt="{{cities.pub}}"></a></div>{% endif %}
+    {% if cities.strip != None %}<div class="strip"> <a href="{{ cities.strip.get_absolute_url }}"><img src="{% static '/media/images/icons/strip.png' %}" alt="{{cities.strip}}"></a></div>{% endif %}
+    {% if cities.fastfood != None %}<div class="fastfood"><a href="{{ cities.fastfood.get_absolute_url }}"><img src="{% static '/media/images/icons/fastfood.png' %}" alt="{{cities.fastfood}}"></a></div>{% endif %}
+
+
+{% endblock %}

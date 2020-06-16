@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+{% block title %}<title>Entertainments</title>{% endblock %}
+{% block content %}
+<div class="header">
+<div class="name-header">All Entertainments in the game</div>
+</div>
+<div class="detail-content">
+
+        <div class="detail-text"><a href="{{ pubs.get_absolute_url }}">{{pubs.name}}</a></div>
+        <div class="detail-text"><a href="{{ hospital.get_absolute_url }}">{{hospital.name}}</a></div>
+        <div class="detail-text"><a href="{{ strip.get_absolute_url }}">{{strip.name}}</a></div>
+        <div class="detail-text"><a href="{{ fastfood.get_absolute_url }}">{{fastfood.name}}</a></div>
+</div>
+{% endblock %}

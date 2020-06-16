@@ -1,0 +1,21 @@
+{% extends "base_generic.html" %}
+{% block title %}<title>Record Studios</title>{% endblock %}
+{% block content %}
+<div class="header">
+    <div class="name-header">All Record Studios in the game</div>
+</div>
+<div class="detail-content">
+{% if recordstudios %}
+<ul class="category-list" clearfix>
+
+    {% for recordstudio in recordstudios %}
+    <li>
+        <a href="{{ recordstudio.get_absolute_url }}">{{recordstudio.name}}</a>
+    </li>
+    {% endfor %}
+</ul>
+    {% else %}
+    <div class="detail-text">There are no recordstudios in database.</div>
+    {% endif %}
+</div>
+{% endblock %}

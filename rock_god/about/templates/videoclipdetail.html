@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+{% block title %}<title>{{videoclip.name}}</title>{% endblock %}
+{% block content %}
+<div class="header">
+    <div class="name-header">{{videoclip.name}}</div>
+    <div class="description">{{videoclip.description}}</div>
+</div>
+<div class="detail-content">
+    {% if videoclip.price != None %}<div class="detail-text">Price: {{videoclip.price}}$</div>{% endif %}
+    {% if videoclip.studio_quality != None %}<div class="detail-text">Studio quality: {{studio_quality}}%</div>{% endif %}
+    {% if videoclip.grade != None %}<div class="detail-text">Grade: {{videoclip.grade}}</div>{% endif %}
+</div>
+
+
+{% endblock %}

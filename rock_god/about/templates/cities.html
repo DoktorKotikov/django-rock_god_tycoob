@@ -1,0 +1,39 @@
+
+{% extends "base_generic.html" %}
+{% load static %}
+{% block title %}<title>Cities</title>{% endblock %}
+{% block style %}
+    <style>
+        .cit:hover{
+            border: 2px solid yellowgreen !important;
+        }
+
+        .content {
+            background: url('{% static "media/images/map_USA.png" %}') no-repeat;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+{% if cities %}
+<div class="cities">
+    {% for city in cities %}
+    <a href="{{ city.get_absolute_url }}" title="{{city.city_name}}"><div class="cit" 
+        style="
+        border-radius: 50%;
+        position: absolute;
+
+        width: 10px;
+        height: 10px;
+
+        border: 2px solid brown;
+        background: yellow;
+
+        left: {{city.x}}px;
+        top: {{city.y}}px;">
+       </div></a>
+    {% endfor %}
+    {% else %}
+      <p>There are no cities in database.</p>
+    {% endif %}
+</div>
+{% endblock %}

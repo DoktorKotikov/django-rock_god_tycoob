@@ -1,0 +1,59 @@
+{% extends "base_generic.html" %}
+{% block title %}<title>{{fastfood.name}}</title>{% endblock %}
+{% block content %}
+<div class="header">
+    <div class="name-header">{{fastfood.name}}</div>
+    <div class="description">{{fastfood.description}}</div>
+</div>
+
+<div class="content-entert">
+<table>
+    <tr>
+        <th>
+            Members
+        </th>
+        <th>
+            1 hour
+        </th>
+        <th>
+            2 hour
+        </th>
+        <th>
+            3 hour
+        </th>
+        <th>
+            4 hour
+        </th>
+    </tr>
+<tr>
+    <td>1 member</td>
+    <td>10$</td>
+    <td>20$</td>
+    <td>30$</td>
+    <td>40$</td>
+</tr>
+<tr>
+    <td>2 member</td>
+    <td>20$</td>
+    <td>40$</td>
+    <td>60$</td>
+    <td>80$</td>
+</tr>
+<tr>
+    <td>3 member</td>
+    <td>30$</td>
+    <td>60$</td>
+    <td>90$</td>
+    <td>120$</td>
+</tr>
+<tr>
+    <td>4 member</td>
+    <td>40$</td>
+    <td>80$</td>
+    <td>160$</td>
+    <td>240$</td>
+</tr>
+</table>
+</div>
+
+{% endblock %}

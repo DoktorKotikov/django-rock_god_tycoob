@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+{% block title %}<title>{{gigs.club_name}}</title>{% endblock %}
+{% block content %}
+<div class="header">
+    <div class="name-header">{{gigs.club_name}}</div>
+    <div class="description">{{gigs.description}}</div>
+</div>
+<div class="detail-content">
+    <div class="detail-text">Max profit: {{max_profit}}$</div>
+    <div class="detail-text">Ticket value: {{gigs.ticket_value}}$</div>
+    <div class="detail-text">Minimum band raiting: {{procent_band_raiting}}%</div>
+    <div class="detail-text">Capacity: {{gigs.capacity}}</div>
+    <div class="detail-text">Grade: {{gigs.grade}}</div>
+</div>
+
+
+{% endblock %}

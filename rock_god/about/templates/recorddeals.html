@@ -1,0 +1,21 @@
+{% extends "base_generic.html" %}
+{% block title %}<title>Record Deals</title>{% endblock %}
+{% block content %}
+<div class="header">
+    <div class="name-header">All Record Deals in the game</div>
+</div>
+<div class="detail-content">
+{% if recorddeals %}
+<ul class="category-list" clearfix>
+
+    {% for recorddeal in recorddeals %}
+    <li>
+        <a href="{{ recorddeal.get_absolute_url }}">{{recorddeal.name}}</a>
+    </li>
+    {% endfor %}
+</ul>
+    {% else %}
+    <div class="detail-text">There are no recorddeals in database.</div>
+    {% endif %}
+</div>
+{% endblock %}

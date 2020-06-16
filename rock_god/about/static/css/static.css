@@ -1,0 +1,266 @@
+/*.sidebar-nav {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(77, 53, 30);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 100px;
+    font-family: "Tahoma";
+    user-select: none;
+  }
+
+.content{
+  border-left: 5px solid black;
+  border-bottom: 5px solid black;
+  height: 903px;
+  width: 1457px;
+  position: absolute;
+  right: 0px;
+  background-color: rgb(154, 135, 117);
+}
+
+
+/* h1 {
+font-family: 'New Rocker', cursive;
+margin-left: 15px;
+} */
+/*
+a, p, li {
+  font-family: 'Open Sans', sans-serif;
+}
+*/
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  line-height: 30px;
+}
+
+.category-list {
+  list-style: none;
+  height: 800px;
+  display: flex;
+  flex-direction: column; 
+  flex-wrap: wrap
+}
+.category-list li {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+/* p {
+  
+} */
+
+
+a {
+  text-decoration: none;
+  font-family: 'New Rocker', cursive;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+a:visited{
+  color: black;
+}
+
+a:active {
+  color: black;
+}
+
+a:link {
+  color: black;
+}
+
+a:hover {
+  color: rgb(79, 79, 77);
+}
+
+
+.about-city{
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  border-top: 5px solid rgb(20, 20, 20);
+  border-right: 5px solid rgb(20, 20, 20);
+  background-color: rgb(118, 100, 85);
+  padding: 5px;
+}
+
+.city-name{
+  font-family: 'New Rocker', cursive;
+  font-size: 36px;
+}
+
+.city-population {
+  font-family: 'New Rocker', cursive;
+  font-size: 16px;
+}
+
+.city-fans {
+  font-family: 'New Rocker', cursive;
+  font-size: 16px;
+}
+
+.back {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  border-left: 5px solid rgb(20, 20, 20);
+  border-top: 5px solid rgb(20, 20, 20);
+  background-color: rgb(118, 100, 85);
+  width: 150px;
+  height: 40px;
+  font-family: 'New Rocker', cursive;
+  font-size: 36px;
+  color: black;
+  text-align: center;
+}
+
+.back:hover{
+  cursor: pointer;
+
+}
+
+.sidebar{
+  background-color: black;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 100px;
+  text-align: center;
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+  border-bottom: 5px solid black;
+}
+
+.navigation {
+  font-family: 'New Rocker', cursive;
+  font-size: 36px;
+  color: rgb(191, 174, 157);
+  padding: 15px;
+}
+
+.side-odd {
+  background-color: rgb(95, 81, 68);
+  font-family: 'New Rocker', cursive;
+  font-size: 24px;
+  color: black;
+  padding: 10px;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  grid-gap: 1px;
+  user-select: none;
+}
+
+.side-odd:hover{
+  color: rgb(191, 174, 157);
+}
+
+.side-even {
+  background-color: rgb(116, 98, 84);
+  font-family: 'New Rocker', cursive;
+  font-size: 24px;
+  color: black;
+  padding: 10px;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  grid-gap: 1px;
+  user-select: none;
+}
+
+.side-even:hover {
+  color: rgb(191, 174, 157);
+}
+
+.music {
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+}
+
+
+.header {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.name-header {
+  font-family: 'New Rocker', cursive;
+  font-size: 44px;
+}
+
+.detail-content {
+  padding-top: 20px;
+  padding-left: 100px;
+
+}
+
+.detail-text{
+  font-family: 'New Rocker', cursive;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.content-entert {
+  margin-left: 100px;
+  margin-right: auto;
+}
+
+table {
+  margin-top: 50px;
+  font-family: 'New Rocker', cursive;
+  font-size: 24px;
+  border: 5px solid black;
+  padding: 5px;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 5px solid black;
+  padding: 20px;
+}
+
+.description {
+  font-family: 'New Rocker', cursive;
+  font-size: 20px;
+  text-align: center;
+}
+
+.index-text {
+  margin-top: 50px;
+  text-indent: 50px;
+  font-family: 'New Rocker', cursive;
+  font-size: 24px;
+  margin-bottom: 150px;
+}
+
+
+.footer-text {
+  margin-top:300px;
+  font-family: 'New Rocker', cursive;
+  font-size: 18px;
+}
+
+.body-text {
+  font-family: 'New Rocker', cursive;
+  font-size: 24px;
+  line-height: 30px;
+  margin-left: 50px;
+}

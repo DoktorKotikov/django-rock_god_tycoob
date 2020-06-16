@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+{% block title %}<title>{{recordstudio.name}}</title>{% endblock %}
+{% block content %}
+<div class="header">
+    <div class="name-header">{{recordstudio.name}}</div>
+    <div class="description">{{recordstudio.description}}</div>
+</div>
+<div class="detail-content">
+    {% if recordstudio.song_cost_rehearsal != None %}<div class="detail-text">Song cost rehearsal: {{recordstudio.song_cost_rehearsal}}$</div>{% endif %}
+    {% if recordstudio.studio_quality != None %}<div class="detail-text">Studio quality: {{studio_quality}}%</div>{% endif %}
+    {% if recordstudio.min_bandrating != None %}<div class="detail-text">Minimum bandrating: {{min_bandrating}}%</div>{% endif %}
+    {% if recordstudio.grade != None %}<div class="detail-text">Grade: {{recordstudio.grade}}</div>{% endif %}
+
+</div>
+
+
+
+{% endblock %}

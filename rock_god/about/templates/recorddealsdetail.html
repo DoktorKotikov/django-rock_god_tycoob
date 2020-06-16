@@ -1,0 +1,34 @@
+{% extends "base_generic.html" %}
+{% block title %}<title>{{recorddeal.name}}</title>{% endblock %}
+{% block content %}
+<div class="header">
+    <div class="name-header">{{recorddeal.name}}</div>
+</div>
+<div class="detail-content">
+    {% if recorddeal.record_rank != None %}<div class="detail-text">Record rank: {{recorddeal.record_rank}}</div>{% endif %}
+    {% if recorddeal.min_bandrating != None %}<div class="detail-text">Minimum band rating: {{minimum_band_rating}}%</div>{% endif %}
+    {% if recorddeal.min_fans != None %}<div class="detail-text">Minimum fans for deal: {{recorddeal.min_fans}}</div>{% endif %}
+    {% if recorddeal.min_albums != None %}<div class="detail-text">Minimum albums for deal: {{recorddeal.min_albums}}</div>{% endif %}
+    {% if recorddeal.album_type != None %}<div class="detail-text">Album type: {{recorddeal.album_type}}</div>{% endif %}
+    {% if recorddeal.studio_discount != None %}<div class="detail-text">Studio discount: {{studio_discount}}%</div>{% endif %}
+    {% if recorddeal.studio_locations != None %}<div class="detail-text">Studio locations: <a href="{{ recorddeal.studio_locations.get_absolute_url }}">{{recorddeal.studio_locations}}</a></div>{% endif %}
+    {% if recorddeal.videoclip_discount != None %}<div class="detail-text">Videoclip discount: {{videclip_discount}}%</div>{% endif %}
+    {% if recorddeal.videoclip_count != None %}<div class="detail-text">Videoclip count: {{recorddeal.videoclip_count}}</div>{% endif %}
+    {% if recorddeal.videoclip_locations != None %}<div class="detail-text">Videoclip locations: <a href="{{recorddeal.videoclip_locations.get_absolute_url}}">{{recorddeal.videoclip_locations}}</a></div>{% endif %}
+    {% if recorddeal.songs_required != None %}<div class="detail-text">Songs required: {{recorddeal.songs_required}}</div>{% endif %}
+    {% if recorddeal.songs_minimum_rating != None %}<div class="detail-text">Songs minimum rating: {{songs_minimum_rating}}%</div>{% endif %}
+    {% if recorddeal.videoclips_required != None %}<div class="detail-text">Videoclips required: {{recorddeal.videoclips_required}}</div>{% endif %}
+    {% if recorddeal.gigs_required != None %}<div class="detail-text">Gigs required: {{recorddeal.gigs_required}}</div>{% endif %}
+    {% if recorddeal.gigs_locations != None %}
+        <div class="detail-text">Gigs locations:
+            {% for gig in recorddeal.gigs_locations.all %}
+            {{gig}}
+            {% if not forloop.last %}, {% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>
+
+
+
+{% endblock %}

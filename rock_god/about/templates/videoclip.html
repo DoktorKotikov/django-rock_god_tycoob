@@ -1,0 +1,21 @@
+{% extends "base_generic.html" %}
+{% block title %}<title>Video CLip</title>{% endblock %}
+{% block content %}
+<div class="header">
+    <div class="name-header">All Video Clips in the game</div>
+</div>
+<div class="detail-content">
+{% if videoclip %}
+<ul class="category-list" clearfix>
+
+    {% for videoclip_ in videoclip %}
+    <li>
+        <a href="{{ videoclip_.get_absolute_url }}">{{videoclip_.name}}</a>
+    </li>
+    {% endfor %}
+</ul>
+    {% else %}
+    <div class="detail-text">There are no videoclips in database.</div>
+    {% endif %}
+</div>
+{% endblock %}

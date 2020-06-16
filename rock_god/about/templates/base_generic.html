@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="{% static '/media/favicon.ico' %}">
+  <link rel="stylesheet" href="{% static 'css/static.css' %}">
+    {% block title %}<title>Main</title>{% endblock %}
+    <meta charset="UTF-8">
+    {% block style %}{% endblock %}
+
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <!-- Добавление дополнительного статического CSS файла -->
+
+</head>
+<body>
+  <div class="container">
+      <div class="sidebar">
+        <div class="navigation">Navigation</div>
+      {% block sidebar %}
+          <a href="{% url 'index' %}"><div class="side-odd"><div class="sidebar-icon"><img src="{% static '/media/images/sidebar_icons/home_sidebar.png' %}" width="30px" height="30px"></div><div class="sidebar-text">Home</div></div></a>
+          <a href="{% url 'cities' %}"><div class="side-even"><div class="sidebar-icon"><img src="{% static '/media/images/sidebar_icons/cities_sidebar.png' %}" width="30px" height="30px"></div><div class="sidebar-text">Cities</div></div></a>
+          <a href="{% url 'gigs' %}"><div class="side-odd"><div class="sidebar-icon"><img src="{% static '/media/images/sidebar_icons/gig_sidebar.png' %}" width="30px" height="30px"></div><div class="sidebar-text">Gigs</div></div></a>
+          <a href="{% url 'recorddeals' %}"><div class="side-even"><div class="sidebar-icon"><img src="{% static '/media/images/sidebar_icons/record_deal_sidebar.png' %}" width="30px" height="30px"></div><div class="sidebar-text">Record Deals</div></div></a>
+          <a href="{% url 'recordstudios' %}"><div class="side-odd"><div class="sidebar-icon"><img src="{% static '/media/images/sidebar_icons/record_studio_sidebar.png' %}" width="30px" height="30px"></div><div class="sidebar-text">Record Studios</div></div></a>
+          <a href="{% url 'videoclip' %}"><div class="side-even"><div class="sidebar-icon"><img src="{% static '/media/images/sidebar_icons/videoclip_sidebar.png' %}" width="30px" height="30px"></div><div class="sidebar-text">Video Clip</div></div></a>
+          <a href="{% url 'entertainments' %}"><div class="side-odd"><div class="sidebar-icon"><img src="{% static '/media/images/sidebar_icons/pub_sidebar.png' %}" width="30px" height="30px"></div><div class="sidebar-text">Entertainments</div></div></a>
+      {% endblock %}
+      </div>
+    <div class="content">
+    {% block content %}
+    {% endblock %}
+    <div class="back">
+      <div onclick="javascript:history.back();return false;">
+        Back 
+      </div>
+  </div>
+  </div>
+  <!-- <div class="music">
+    <audio src="../../static/music/Track0.ogg" controls> 
+
+    </audio>
+  </div> -->
+</div>
+</body>
+</html>
